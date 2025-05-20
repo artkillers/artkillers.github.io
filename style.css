@@ -1,0 +1,337 @@
+  @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+  /* Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #1b1b1b;
+    color: #00ff00;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5), 0 0 20px rgba(0, 255, 0, 0.4);
+    overflow: auto;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  /* Glitch effect for headings */
+  .glitch {
+    position: relative;
+    color: #C0C0C0;
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+    user-select: none;
+  }
+  .glitch::before,
+  .glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    width: 100%;
+    opacity: 0.8;
+    clip-path: var(--clip);
+  }
+  .glitch::before {
+    animation: glitchTop 2s infinite linear;
+    color: #00ff00;
+    z-index: -1;
+  }
+  .glitch::after {
+    animation: glitchBottom 2s infinite linear;
+    color: #00ff00;
+    z-index: -2;
+  }
+
+  @keyframes glitchTop {
+            0% { text-shadow: 2px 0 0 rgba(0,255,0,0.5), -2px 0 0 rgba(0,255,0,0.4); }
+            25% { text-shadow: -2px 0 0 rgba(0,255,0,0.5), 2px 0 0 rgba(0,255,0,0.4); }
+            50% { text-shadow: 2px 0 0 rgba(0,255,0,0.5), -2px 0 0 rgba(0,255,0,0.4); }
+            75% { text-shadow: -2px 0 0 rgba(0,255,0,0.5), 2px 0 0 rgba(0,255,0,0.4); }
+            100% { text-shadow: 2px 0 0 rgba(0,255,0,0.5), -2px 0 0 rgba(0,255,0,0.4); }
+        }
+  @keyframes glitchBottom {
+            0% { text-shadow: 2px 0 0 rgba(0,255,0,0.5), -2px 0 0 rgba(0,255,0,0.4); }
+            25% { text-shadow: -2px 0 0 rgba(0,255,0,0.5), 2px 0 0 rgba(0,255,0,0.4); }
+            50% { text-shadow: 2px 0 0 rgba(0,255,0,0.5), -2px 0 0 rgba(0,255,0,0.4); }
+            75% { text-shadow: -2px 0 0 rgba(0,255,0,0.5), 2px 0 0 rgba(0,255,0,0.4); }
+            100% { text-shadow: 2px 0 0 rgba(0,255,0,0.5), -2px 0 0 rgba(0,255,0,0.4); }
+        }
+
+  /* Grainy noise overlay */
+  body::after {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  background: url('https://media4.giphy.com/media/12W5Sg2koWYnwA/giphy.gif?cid=6c09b952ir375ghvf069pymudfga527tztrup1e2bm9eon09&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g') repeat;
+  opacity: 0.03;
+  z-index: 9999;
+  }
+  
+  /* Profile section */
+  .profile {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .profile img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 2px solid #00ff00;
+    box-shadow: 0 0 10px #00ff00;
+    margin-bottom: 15px;
+  }
+  .profile h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  .social-links {
+    margin-top: 15px;
+  }
+  .social-links a {
+    color: #00ff00;
+    margin: 0 12px;
+    font-size: 1.6rem;
+    transition: color 0.3s;
+  }
+  .social-links a:hover {
+    color: #0f0;
+  }
+
+  /* About section */
+  #about {
+    margin-bottom: 50px;
+  }
+  #about p {
+    line-height: 1.6;
+    font-size: 1.1rem;
+    color: #a0ffa0;
+  }
+  .tab-item {
+    cursor: pointer;
+    padding: 6px 12px;
+    border: 2px solid #00ff00;
+    border-radius: 4px;
+    background: transparent;
+    font-weight: 600;
+    color: #00ff00;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .tab-item.active,
+  .tab-item:hover {
+    background-color: #00ff00;
+    color: #010a0a;
+  }
+  .tab-section {
+    display: none;
+  }
+  .tab-section.active {
+    display: block;
+  }
+  /* Skills */
+  #skills {
+    margin-bottom: 50px;
+  }
+  .skills-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+  }
+  .skill {
+    position: relative;
+    width: 120px;
+    height: 180px;
+    background: rgba(0, 255, 0, 0.07);
+    border: 2px solid #00ff00;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    padding-top: 15px;
+    cursor: default;
+    box-shadow: 0 0 15px #00ff00;
+  }
+  .skill-icon {
+    font-size: 60px;
+    color: #00ff00;
+    margin-bottom: 12px;
+  }
+  .skill .liquid-fill {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #00ff00;
+    opacity: 0.25;
+    border-radius: 0 0 15px 15px;
+    height: 0%;
+    z-index: 0;
+    transition: height 0.3s ease-out;
+  }
+  .percentage {
+    position: absolute;
+    bottom: 12px;
+    width: 100%;
+    font-size: 1.3rem;
+    font-weight: 700;
+    z-index: 1;
+    user-select: none;
+  }
+
+  /* Projects */
+  #projects {
+    margin-bottom: 50px;
+  }
+  .project-card {
+    background: rgba(0,255,0,0.07);
+    border: 2px solid #00ff00;
+    border-radius: 10px;
+    padding: 12px;
+    box-shadow: 0 0 15px #00ff00;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  .project-card:hover {
+    transform: scale(1.05);
+  }
+  .project-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 7px;
+    margin-bottom: 10px;
+  }
+  .project-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+  .project-card button {
+    background: transparent;
+    border: 2px solid #00ff00;
+    color: #00ff00;
+    padding: 6px 14px;
+    cursor: pointer;
+    font-family: 'Share Tech Mono', monospace;
+    font-weight: 700;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+  .project-card button:hover {
+    background-color: #00ff00;
+    color: #010a0a;
+  }
+
+  /* Contact */
+#contact {
+  margin-bottom: 50px;
+}
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 450px;
+  margin: 0 auto;
+} 
+#contact input,
+#contact textarea {
+  background-color: rgba(0, 0, 0, 0.2); /* transparan gelap */
+  border: 2px solid #00ff00;
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: #00ff00;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1rem;
+  resize: none;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+#contact input::placeholder,
+#contact textarea::placeholder {
+  color: #00ff00a0; /* hijau transparan */
+}
+#contact input:focus,
+#contact textarea:focus {
+  border-color: #00ff00;
+  box-shadow: 0 0 5px #00ff00;
+}
+#contact button {
+  width: fit-content;
+  align-self: center;
+  padding: 10px 22px;
+  font-weight: 700;
+  font-family: 'Share Tech Mono', monospace;
+  background: transparent;
+  border: 2px solid #00ff00;
+  color: #00ff00;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+#contact button:hover {
+  background-color: #00ff00;
+  color: #010a0a;
+}
+  
+  .typed-text {
+      font-size: 1.3em;
+      margin-top: 10px;
+      color: #00ff00;
+    }
+
+  .container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+/* SKILLS GRID */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+/* PROJECTS GRID */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+/* RESPONSIVE BREAKPOINT */
+@media (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+   .skill {
+      width: 100px;
+      height: 160px;
+    }
+    .skill-icon {
+      font-size: 50px;
+    }
+    .project-card img {
+      height: 100px;
+    }
+  }
