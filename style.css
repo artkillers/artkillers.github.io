@@ -33,16 +33,14 @@
 }
 .fas.fa-user-secret {
     font-size: 70px;
-    color: #00ff00;
+    color: #C0C0C0;
     margin-bottom: 15px;
 }
-.terminal-box {
-    text-align: center;
-    animation: blink 1s infinite alternate;
-}
 .glitch-icon {
-  font-size: 100px;
-  color: #C0C0C0;
+  font-size: 40px;
+  color: #00ff00;
+  margin-right: 10px;
+  vertical-align: middle;
   animation: glitchSoft 0.8s infinite;
   text-shadow: 
     1px 0 #0f0,
