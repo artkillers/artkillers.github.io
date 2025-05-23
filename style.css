@@ -20,8 +20,20 @@
     text-shadow: 0 0 10px rgba(0, 255, 0, 0.5), 0 0 20px rgba(0, 255, 0, 0.4);
     overflow: auto;
   }
-  
   #preloader {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: #000;
+    color: #00ff00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    font-family: 'Courier New', monospace;
+  }
+
+#preloader {
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
@@ -31,12 +43,17 @@
   align-items: center;
   z-index: 9999;
   font-family: 'Courier New', monospace;
-  }
-  .terminal-box {
+}
+.fas.fa-life-ring {
+    font-size: 70px;
+    color: #00ff00;
+    margin-bottom: 15px;
+}
+.terminal-box {
     text-align: center;
     animation: blink 1s infinite alternate;
-  }
-  .glitch-icon {
+}
+.glitch-icon {
   font-size: 100px;
   color: #00ff80;
   animation: glitchSoft 0.8s infinite;
@@ -45,14 +62,14 @@
     -1px 0 #0f0,
     0 1px #0f0,
     0 -1px #0f0;
-  }
-  @keyframes glitchSoft {
+}
+@keyframes glitchSoft {
   0% { transform: translate(0); opacity: 1; }
   25% { transform: translate(-1px, 0); opacity: 0.95; }
   50% { transform: translate(1px, 0); opacity: 0.98; }
   75% { transform: translate(0, 1px); opacity: 0.95; }
   100% { transform: translate(0, -1px); opacity: 1; }
-  }
+}
 
   .container {
     max-width: 900px;
