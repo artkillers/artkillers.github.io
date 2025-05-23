@@ -116,37 +116,26 @@
   z-index: 9999;
   }
   
-/* Profile section */
-.profile {
-  text-align: center;
-  margin-bottom: 40px;
-  cursor: pointer; /* agar terlihat seperti tombol */
-  user-select: none; /* mencegah teks terseleksi saat klik */
-  transition: box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.profile:hover,
-.profile:focus {
-  border-color: #00ff00;
-  box-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00;
-  outline: none;
-}
-
-.profile img {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  border: 2px solid #00ff00;
-  box-shadow: 0 0 10px #00ff00;
-  margin-bottom: 15px;
-  transition: box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.profile:hover img,
-.profile:focus img {
-  border-color: #00ff00;
-  box-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00;
-}
+  /* Profile section */
+  #yt-player {
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+  }
+  .profile {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .profile img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 2px solid #00ff00;
+    box-shadow: 0 0 10px #00ff00;
+    margin-bottom: 15px;
+  }
   .profile h1 {
     font-size: 2rem;
     margin-bottom: 10px;
