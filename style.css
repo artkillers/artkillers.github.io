@@ -33,14 +33,10 @@
     z-index: 9999;
     font-family: 'Courier New', monospace;
   }
-  .fas.fa-user-secret {
-      font-size: 60px;
-      color: #00ff00;
-      text-shadow:
-        0 0 5px #00ff00,
-        0 0 10px #00ff00,
-        0 0 20px #00ff00;
-      margin-bottom: 15px;
+  .fas.fa-life-ring {
+    font-size: 60px;
+    color: #00ff00;
+    margin-bottom: 15px;
   }
   .terminal-box {
     text-align: center;
