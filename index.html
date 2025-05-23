@@ -14,9 +14,9 @@
   <!-- Favicon (Optional) -->
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
-<body>
-
-    <!-- Profile -->
+<body oncontextmenu="return false;" oncopy="return false;" onselectstart="return false;"> 
+ 
+    <!-- Preloader -->
     <div id="preloader">
     <div class="terminal-box">
     <i class="fas fa-user-secret glitch-icon"></i>
@@ -169,6 +169,12 @@
     }
   }
   window.addEventListener('load', imagesLoaded);
+  </script>
+  
+  <script>   
+    document.addEventListener('contextmenu', (e) => e.preventDefault());    
+    document.addEventListener('selectstart', (e) => e.preventDefault());
+    document.addEventListener('copy', (e) => e.preventDefault());    
   </script>
 
   <!-- Typed.js for typing effect -->
