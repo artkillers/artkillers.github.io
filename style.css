@@ -146,6 +146,25 @@
   .social-links a:hover {
     color: #0f0;
   }
+  .download-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-family: 'Courier New', monospace;
+  background-color: #00ff00;
+  color: #000;
+  border: 2px solid #00ff00;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 10px #00ff00;
+  transition: all 0.3s ease;
+  }
+  .download-btn:hover {
+  background-color: #000;
+  color: #00ff00;
+  box-shadow: 0 0 15px #00ff00, 0 0 30px #00ff00 inset;
+  }
 
   /* About section */
   #about {
