@@ -15,7 +15,18 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
-  <div class="container">
+    <!-- Profile -->
+    <div id="preloader">
+    <div class="terminal-box">
+    <span class="loading-text">[ ACCESSING SYSTEM ]</span>
+    <div class="glitch-lines">
+      <span class="glitch">█</span>
+      <span class="glitch">█</span>
+      <span class="glitch">█</span>
+    </div>
+    </div>
+    </div>
+    <div class="container">
     <!-- Profile -->
     <section class="profile" id="home">
       <br>
@@ -126,6 +137,36 @@
       </form>
     </section>
   </div>
+  
+  <script>
+  const preloader = document.getElementById('preloader');
+
+  function imagesLoaded() {
+    const images = document.images;
+    let loadedCount = 0;
+    const total = images.length;
+
+    if(total === 0) return hidePreloader();
+
+    for(let img of images) {
+      if(img.complete) increment();
+      else img.addEventListener('load', increment);
+    }
+
+    function increment() {
+      loadedCount++;
+      if(loadedCount === total) hidePreloader();
+    }
+
+    function hidePreloader() {
+      preloader.style.transition = 'opacity 0.5s ease';
+      preloader.style.opacity = 0;
+      setTimeout(() => preloader.style.display = 'none', 500);
+    }
+  }
+
+  window.addEventListener('load', imagesLoaded);
+  </script>
 
   <!-- Typed.js for typing effect -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>

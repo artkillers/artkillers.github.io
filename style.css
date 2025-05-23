@@ -20,6 +20,51 @@
     text-shadow: 0 0 10px rgba(0, 255, 0, 0.5), 0 0 20px rgba(0, 255, 0, 0.4);
     overflow: auto;
   }
+  
+  #preloader {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: #000;
+    color: #00ff9f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    font-family: 'Courier New', monospace;
+  }
+  .terminal-box {
+    text-align: center;
+    animation: blink 1s infinite alternate;
+  }
+  .loading-text {
+    font-size: 1.2em;
+    animation: typing 3s steps(20) 1 forwards;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    border-right: 2px solid #00ff9f;
+  }
+  .glitch-lines {
+    margin-top: 10px;
+  }
+  .glitch {
+    display: inline-block;
+    animation: glitchAnim 0.2s infinite;
+  }
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  @keyframes blink {
+    from { opacity: 1 }
+    to { opacity: 0.7 }
+  }
+  @keyframes glitchAnim {
+    0% { transform: translate(0); opacity: 1; }
+    50% { transform: translateX(-1px); opacity: 0.6; }
+    100% { transform: translateX(1px); opacity: 1; }
+  }
 
   .container {
     max-width: 900px;
