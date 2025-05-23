@@ -38,12 +38,17 @@
     animation: blink 1s infinite alternate;
   }
   .loading-text {
-    font-size: 1.2em;
-    animation: typing 3s steps(20) 1 forwards;
-    white-space: nowrap;
-    overflow: hidden;
-    display: inline-block;
-    border-right: 2px solid #00ff9f;
+  font-size: 1.2em;
+  animation: typing 3s steps(20) 1 forwards;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  border-right: 2px solid #00ff9f;
+  color: #00ff9f;
+  text-shadow:
+    0 0 5px #00ff9f,
+    0 0 10px #00ff9f,
+    0 0 20px #00ff9f;
   }
   .glitch-lines {
     margin-top: 10px;
