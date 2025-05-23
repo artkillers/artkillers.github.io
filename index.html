@@ -137,56 +137,6 @@
     </section>
   </div>
   
-  <script>
-  const preloader = document.getElementById('preloader');
-  const MIN_DISPLAY_TIME = 5000; // minimal tampil 5 detik
-  const startTime = Date.now();
-
-  // Kunci scroll saat preloader aktif
-  document.body.style.overflow = 'hidden';
-
-  function hidePreloader() {
-    const elapsed = Date.now() - startTime;
-    const remaining = Math.max(0, MIN_DISPLAY_TIME - elapsed);
-
-    setTimeout(() => {
-      preloader.style.transition = 'opacity 0.5s ease';
-      preloader.style.opacity = 0;
-      setTimeout(() => {
-        preloader.style.display = 'none';
-        // Aktifkan kembali scroll
-        document.body.style.overflow = 'auto';
-      }, 500);
-    }, remaining);
-  }
-
-  function imagesLoaded() {
-    const images = document.images;
-    let loadedCount = 0;
-    const total = images.length;
-
-    if (total === 0) return hidePreloader();
-
-    for (let img of images) {
-      if (img.complete) increment();
-      else img.addEventListener('load', increment);
-    }
-
-    function increment() {
-      loadedCount++;
-      if (loadedCount === total) hidePreloader();
-    }
-  }
-
-  window.addEventListener('load', imagesLoaded);
-  </script>
-  
-  <script>   
-    document.addEventListener('contextmenu', (e) => e.preventDefault());    
-    document.addEventListener('selectstart', (e) => e.preventDefault());
-    document.addEventListener('copy', (e) => e.preventDefault());    
-  </script>
-
   <!-- Typed.js for typing effect -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 

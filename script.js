@@ -66,3 +66,75 @@ window.addEventListener("DOMContentLoaded", () => {
     animateSkills();
   }
 });
+
+  
+  const preloader = document.getElementById('preloader');
+  const MIN_DISPLAY_TIME = 5000; // minimal tampil 5 detik
+  const startTime = Date.now();
+
+  // Kunci scroll saat preloader aktif
+  document.body.style.overflow = 'hidden';
+
+  function hidePreloader() {
+    const elapsed = Date.now() - startTime;
+    const remaining = Math.max(0, MIN_DISPLAY_TIME - elapsed);
+
+    setTimeout(() => {
+      preloader.style.transition = 'opacity 0.5s ease';
+      preloader.style.opacity = 0;
+      setTimeout(() => {
+        preloader.style.display = 'none';
+        // Aktifkan kembali scroll
+        document.body.style.overflow = 'auto';
+      }, 500);
+    }, remaining);
+  }
+
+  function imagesLoaded() {
+    const images = document.images;
+    let loadedCount = 0;
+    const total = images.length;
+
+    if (total === 0) return hidePreloader();
+
+    for (let img of images) {
+      if (img.complete) increment();
+      else img.addEventListener('load', increment);
+    }
+
+    function increment() {
+      loadedCount++;
+      if (loadedCount === total) hidePreloader();
+    }
+  }
+  window.addEventListener('load', imagesLoaded);
+ 
+ 
+    const blurOverlay = document.createElement('div');
+    blurOverlay.style.position = 'fixed';
+    blurOverlay.style.top = 0;
+    blurOverlay.style.left = 0;
+    blurOverlay.style.width = '100%';
+    blurOverlay.style.height = '100%';
+    blurOverlay.style.zIndex = 9999;
+    blurOverlay.style.backdropFilter = 'blur(10px)';
+    blurOverlay.style.display = 'none';
+    document.body.appendChild(blurOverlay);
+
+    document.addEventListener('keydown', function(e) {
+    if (e.key === 'PrintScreen') {
+    blurOverlay.style.display = 'block';
+    setTimeout(() => {
+      blurOverlay.style.display = 'none';
+    }, 3000); 
+    }
+    });
+    document.addEventListener('contextmenu', (e) => e.preventDefault());    
+    document.addEventListener('selectstart', (e) => e.preventDefault());
+    document.addEventListener('copy', (e) => e.preventDefault());    
+    document.addEventListener('keydown', function(e) {
+    if (e.key === 'PrintScreen') {
+    alert('Not Print Screen');
+    navigator.clipboard.writeText(' ');
+    }
+    });
