@@ -288,7 +288,7 @@
 } 
 #contact input,
 #contact textarea {
-  background-color: rgba(0, 0, 0, 0.2); /* transparan gelap */
+  background-color: rgba(0, 0, 0, 0.2);
   border: 2px solid #00ff00;
   border-radius: 8px;
   padding: 10px 14px;
@@ -298,16 +298,18 @@
   resize: none;
   outline: none;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  
+  /* efek neon default (lembut) */
+  box-shadow: 0 0 5px #00ff00a0;
 }
-#contact input::placeholder,
-#contact textarea::placeholder {
-  color: #00ff00a0; /* hijau transparan */
-}
+
 #contact input:focus,
 #contact textarea:focus {
   border-color: #00ff00;
-  box-shadow: 0 0 5px #00ff00;
+  /* efek neon kuat saat fokus */
+  box-shadow: 0 0 10px 2px #00ff00;
 }
+
 #contact button {
   width: fit-content;
   align-self: center;
@@ -319,11 +321,17 @@
   color: #00ff00;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  
+  /* efek neon default */
+  box-shadow: 0 0 5px #00ff00a0;
 }
+
 #contact button:hover {
   background-color: #00ff00;
   color: #010a0a;
+  /* neon lebih terang saat hover */
+  box-shadow: 0 0 15px 4px #00ff00;
 }
   
   .typed-text {
