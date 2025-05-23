@@ -32,7 +32,7 @@
   font-family: 'Courier New', monospace;
 }
 .fas.fa-user-secret {
-    font-size: 70px;
+    font-size: 100px;
     color: #00ff00;
     margin-bottom: 15px;
 }
@@ -80,8 +80,8 @@
 
 /* === Glitch Icon (used in headers or anywhere) === */
 .glitch-icon {
-  font-size: 100px;
-  color: #00ff00;
+  font-size: 50px;
+  color: #C0C0C0;
   margin-right: 10px;
   vertical-align: middle;
   animation: glitchAnim 0.8s infinite;
