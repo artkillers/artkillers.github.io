@@ -66,14 +66,6 @@ function animateSkills() {
     animateSkills();
   }
   });
-
-  function playMusic() {
-  const iframe = document.getElementById('yt-player');
-  if (!iframe.src) {  // agar tidak reload berulang kali
-  iframe.src = "https://www.youtube.com/embed/hxPzWZ7Z25k?autoplay=1&loop=1&playlist=hxPzWZ7Z25k";
-    alert("Play Music Now!");
-  }
-  }
   
   const preloader = document.getElementById('preloader');
   const MIN_DISPLAY_TIME = 5000; // minimal tampil 5 detik
@@ -115,6 +107,7 @@ function animateSkills() {
     }
   }
   window.addEventListener('load', imagesLoaded);
+ 
  
     const blurOverlay = document.createElement('div');
     blurOverlay.style.position = 'fixed';
