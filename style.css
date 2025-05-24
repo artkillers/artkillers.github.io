@@ -121,7 +121,21 @@
     text-align: center;
     margin-bottom: 40px;
   }
-  .profile img {
+  .profile-button {
+  background: transparent;
+  border: 2px solid #00ff00;
+  border-radius: 12px;
+  padding: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px #00ff00;
+  display: inline-block;
+  }
+  .profile-button:hover {
+  background-color: rgba(0, 255, 0, 0.1);
+  transform: scale(1.05);
+  }
+  .profile-button img {
     width: 130px;
     height: 130px;
     border-radius: 50%;
