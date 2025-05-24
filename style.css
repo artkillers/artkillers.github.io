@@ -117,34 +117,39 @@
   }
   
   /* Profile section */
-  .profile {
-    text-align: center;
-    margin-bottom: 40px;
-  }
+.profile {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
 .profile-button {
-  all: unset;
-  display: inline-block;
-  border-radius: 50%;
+  width: 136px;
+  height: 136px;
+  border: none;
   padding: 0;
-  box-shadow: 0 0 10px #00ff00;
+  margin: 0;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: 0 0 8px #00ff00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
   transition: transform 0.3s ease;
-  overflow: hidden; /* Penting: potong bagian keluar */
-  line-height: 0; /* Hilangkan space vertikal bawaan */
-  vertical-align: middle;
 }
 
 .profile-button:hover {
+  background-color: rgba(0, 255, 0, 0.1);
   transform: scale(1.05);
 }
 
 .profile-button img {
-  display: block; /* Hindari space default */
   width: 130px;
   height: 130px;
-  border-radius: 50%;
-  border: 2px solid #00ff00;
-  box-shadow: 0 0 10px #00ff00;
   object-fit: cover;
+  border-radius: 50%;
+  display: block;
 }
   .profile h1 {
     font-size: 2rem;
