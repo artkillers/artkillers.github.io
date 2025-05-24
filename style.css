@@ -166,27 +166,32 @@ body::after {
 }
 
 /* Tabs */
-  .tab-item {
-    cursor: pointer;
-    padding: 6px 12px;
-    border: 2px solid #00ff00;
-    border-radius: 4px;
-    background: transparent;
-    font-weight: 600;
-    color: #00ff00;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  .tab-item.active,
-  .tab-item:hover {
-    background-color: #00ff00;
-    color: #010a0a;
-  }
-  .tab-section {
-    display: none;
-  }
-  .tab-section.active {
-    display: block;
-  }
+.tab-item {
+  cursor: pointer;
+  padding: 6px 12px;
+  border: 2px solid #00ff00;
+  border-radius: 4px;
+  background: transparent;
+  font-weight: 600;
+  color: #00ff00;
+  margin: 0 5px;
+  margin-top: 40px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.tab-item.active,
+.tab-item:hover {
+  background-color: #00ff00;
+  color: #010a0a;
+}
+
+.tab-section {
+  display: none;
+}
+
+.tab-section.active {
+  display: block;
+}
 
 /* About Section */
 #about {

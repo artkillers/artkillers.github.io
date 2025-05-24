@@ -66,6 +66,11 @@ function animateSkills() {
     animateSkills();
   }
   });
+  document.querySelectorAll(".tab-item").forEach(tab => {
+  if (!tab.textContent.trim()) {
+    tab.remove();
+  }
+  });
   
   const preloader = document.getElementById('preloader');
   const MIN_DISPLAY_TIME = 5000; // minimal tampil 5 detik
