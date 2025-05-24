@@ -73,7 +73,7 @@ body::after {
   font-size: 2.8rem;
   font-weight: 700;
   letter-spacing: 3px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   user-select: none;
   color: #C0C0C0;
   animation: glitchAnim 2s infinite linear;
@@ -85,7 +85,6 @@ body::after {
   font-size: 50px;
   color: #C0C0C0;
   margin-right: 10px;
-  margin-top: 20px;
   margin-bottom: 28px;
   vertical-align: middle;
   animation: glitchAnim 2s infinite linear;
@@ -110,7 +109,7 @@ body::after {
 /* Profile Section */
 .profile {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .profile img {
@@ -119,20 +118,18 @@ body::after {
   border-radius: 50%;
   border: 2px solid #00ff00;
   box-shadow: 0 0 10px #00ff00;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .profile h1 {
   font-size: 2rem;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 10px 0;
 }
 
 .download-btn {
   display: inline-block;
   padding: 10px 20px;
-  margin-top: 25px;
-  margin-bottom: 40px;
+  margin-top: 15px;
   background-color: #00ff00;
   color: #000;
   border: 2px solid #00ff00;
@@ -166,47 +163,31 @@ body::after {
 }
 
 /* Tabs */
-.about-tabs {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-bottom: 30px;
-}
-
 .tab-item {
   cursor: pointer;
-  padding: 8px 16px;
+  padding: 6px 12px;
   border: 2px solid #00ff00;
-  border-radius: 6px;
+  border-radius: 4px;
   background: transparent;
   font-weight: 600;
-  font-family: 'Share Tech Mono', monospace;
   color: #00ff00;
+  margin: 0 5px;
   transition: background-color 0.3s, color 0.3s;
-  min-width: 100px;
-  text-align: center;
 }
 
-.tab-item:hover,
-.tab-item.active {
+.tab-item.active,
+.tab-item:hover {
   background-color: #00ff00;
   color: #010a0a;
 }
 
 .tab-section {
   display: none;
-  padding-top: 20px;
-  padding-bottom: 40px;
+  margin-top: 40px;
 }
 
 .tab-section.active {
   display: block;
-}
-
-/* Fix tombol kosong/tab kosong */
-.tab-item:empty {
-  display: none;
 }
 
 /* About Section */
@@ -216,7 +197,6 @@ body::after {
   color: #a0ffa0;
   max-width: 800px;
   margin: 0 auto;
-  margin-bottom: 30px; 
 }
 
 /* Skills */
@@ -244,8 +224,7 @@ body::after {
 .skill-icon {
   font-size: 50px;
   color: #00ff00;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .skill .liquid-fill {
@@ -375,86 +354,8 @@ body::after {
 }
 
 /* Responsive Projects Only */
-/* Ukuran layar kecil (mobile <= 480px) */
-@media (max-width: 480px) {
-  .profile img {
-    width: 100px;
-    height: 100px;
-  }
-
-  .download-btn {
-    padding: 8px 16px;
-    font-size: 0.9rem;
-  }
-
-  .social-links a {
-    font-size: 1.3rem;
-    margin: 0 8px;
-  }
-
-  .glitch {
-    font-size: 2rem;
-  }
-
-  .glitch-icon {
-    font-size: 38px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-
-  .skill {
-    width: 90px;
-    height: 140px;
-  }
-
-  .skill-icon {
-    margin-top: 20px;
-    font-size: 40px;
-  }
-
-  .project-card h3 {
-    font-size: 1rem;
-  }
-
-  #contact input,
-  #contact textarea {
-    font-size: 0.9rem;
-  }
-}
-
-/* Ukuran tablet (481px - 767px) */
-@media (min-width: 481px) and (max-width: 767px) {
-  .skill {
-    width: 100px;
-    height: 150px;
-  }
-
-  .skill-icon {
-    margin-top: 20px;
-    font-size: 45px;
-  }
-
-  .glitch {
-    font-size: 2.2rem;
-  }
-}
-
-/* Desktop kecil (768px - 1024px) */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) {
   .projects-grid {
     grid-template-columns: repeat(3, 1fr);
-  }
-  .profile img {
-    width: 120px;
-    height: 120px;
-  }
-
-  .glitch {
-    font-size: 2.5rem;
-  }
-
-  .glitch-icon {
-    margin-top: 20px;
-    font-size: 45px;
   }
 }
