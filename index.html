@@ -4,55 +4,37 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Art Killers</title>
-
-  <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
-
-  <!-- Main CSS -->
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Favicon (Optional) -->
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
-<body oncontextmenu="return false;" oncopy="return false;" onselectstart="return false;"> 
- 
-    <!-- Preloader And Footer -->
-    <div id="preloader">
+<body oncontextmenu="return false;" oncopy="return false;" onselectstart="return false;">
+  <!-- Preloader -->
+  <div id="preloader">
     <div class="terminal-box">
-    <i class="fas fa-user-secret glitch-icon"></i>
+      <i class="fas fa-user-secret glitch-icon"></i>
     </div>
-    </div>
-    
-      <!-- Profile -->
-      <div class="container">
-      <section class="profile" id="home">
-      <br>
+  </div>
+
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Profile Section -->
+    <section class="profile" id="home">
       <img src="https://i.ibb.co/dsMWb0Y4/IMG-20250515-144312-171.webp" alt="profile">
-      <br>
-      <!-- Social Media Links -->
       <div class="social-links">
-      <a href="artkillers.github.io" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-      <a href="artkillers.github.io" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
-      <a href="artkillers.github.io" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="artkillers.github.io" title="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://artkillers.github.io" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://artkillers.github.io" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
+        <a href="https://artkillers.github.io" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="mailto:artkillers.github.io" title="Email"><i class="fas fa-envelope"></i></a>
       </div>
-      <br>
       <h1 class="glitch">Art Killers</h1>
-      <br>
-      <div class="typed-text">
-      <span id="typed"></span>
-      </div>
-      <br>
+      <div class="typed-text"><span id="typed"></span></div>
       <a href="artkillers.pdf" download class="download-btn">Download CV</a>
-      <br>
-      <br>
-      <p>
-      <br>
+      <p class="description">
         Celebrating the artistic and cultural heritage that has existed since ancient times, makes us really like challenges & learning new things in the rapid development of technology.
-      <br>
-      </p>    
-      </section>
- 
+      </p>
+    </section>
+
     <!-- Navigation Tabs -->
     <div class="skills-tabs">
       <span class="tab-item active" data-target="skills">Skills</span>
@@ -62,12 +44,9 @@
 
     <!-- Skills Section -->
     <section id="skills" class="tab-section active">
-        <br>
-        <p>Each Skill Percentage</p>
-        <br>
-        <h2><i class="fas fa-code glitch-icon"></i></h2>
-        <div class="skills-grid">
-        <!-- Each skill with icon and animated percentage fill -->
+      <p>Each Skill Percentage</p>
+      <h2><i class="fas fa-code glitch-icon"></i></h2>
+      <div class="skills-grid">
         <div class="skill" data-percent="90" title="HTML5">
           <div class="liquid-fill"></div>
           <i class="fab fa-html5 skill-icon"></i>
@@ -103,9 +82,7 @@
 
     <!-- Projects Section -->
     <section id="projects" class="tab-section">
-      <br>
       <p>Latest Projects</p>
-      <br>
       <h2><i class="fas fa-code-branch glitch-icon"></i></h2>
       <div class="projects-grid">
         <div class="project-card">
@@ -125,9 +102,7 @@
 
     <!-- Contact Section -->
     <section id="contact" class="tab-section">
-      <br>
       <p>Get In Touch</p>
-      <br>
       <h2><i class="far fa-envelope glitch-icon"></i></h2>
       <form onsubmit="event.preventDefault(); alert('Thank you for reaching out!'); this.reset();">
         <input type="text" name="name" placeholder="Your Name" required />
@@ -137,11 +112,8 @@
       </form>
     </section>
   </div>
-  
-  <!-- Typed.js for typing effect -->
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
-  <!-- Main JS -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script src="script.js"></script>
 </body>
 </html>
