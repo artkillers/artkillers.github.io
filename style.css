@@ -31,15 +31,9 @@
   z-index: 9999;
   font-family: 'Courier New', monospace;
 }
-.preloader-footer {
-  font-size: 0.5rem; 
-  margin-top: 10px;
-  color: #00ff00;
-  opacity: 0.5;
-}
 .fas.fa-user-secret {
     font-size: 100px;
-    color: #00ff00;
+    color: #C0C0C0;
     margin-bottom: 15px;
 }
 .terminal-box {
