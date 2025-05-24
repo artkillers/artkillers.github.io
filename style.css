@@ -47,36 +47,19 @@
 }
 /* === Glitch Heading (Text) === */
 .glitch {
-  position: relative;
   font-size: 2.8rem;
   font-weight: 700;
   letter-spacing: 3px;
   margin-bottom: 40px;
   user-select: none;
   color: #C0C0C0;
-}
-
-.glitch::before,
-.glitch::after {
-  content: attr(data-text);
-  position: absolute;
-  left: 0;
-  width: 100%;
-  opacity: 0.8;
-}
-
-.glitch::before {
   animation: glitchAnim 2s infinite linear;
-  color: #00ff00;
-  z-index: -1;
+    text-shadow:
+    1px 0 #C0C0C0,
+    -1px 0 #C0C0C0,
+    0 1px #C0C0C0,
+    0 -1px #C0C0C0;
 }
-
-.glitch::after {
-  animation: glitchAnim 2s infinite linear;
-  color: #00ff00;
-  z-index: -2;
-}
-
 
 /* === Glitch Icon (used in headers or anywhere) === */
 .glitch-icon {
