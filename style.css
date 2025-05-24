@@ -117,18 +117,20 @@
   }
   
   /* Profile section */
-.profile {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
+  .profile {
+    text-align: center;
+    margin-bottom: 40px;
+  }
 .profile-button {
-  all: unset; /* menghapus default button style */
+  all: unset;
   display: inline-block;
   border-radius: 50%;
   padding: 0;
   box-shadow: 0 0 10px #00ff00;
   transition: transform 0.3s ease;
+  overflow: hidden; /* Penting: potong bagian keluar */
+  line-height: 0; /* Hilangkan space vertikal bawaan */
+  vertical-align: middle;
 }
 
 .profile-button:hover {
@@ -136,6 +138,7 @@
 }
 
 .profile-button img {
+  display: block; /* Hindari space default */
   width: 130px;
   height: 130px;
   border-radius: 50%;
