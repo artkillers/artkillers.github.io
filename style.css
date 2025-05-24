@@ -166,37 +166,50 @@ body::after {
 }
 
 /* Tabs */
-.tab-item {
-  cursor: pointer;
-  padding: 6px 12px;
-  border: 2px solid #00ff00;
-  border-radius: 4px;
-  background: transparent;
-  font-weight: 600;
-  color: #00ff00;
-  margin: 0 5px;
-  margin-top: 40px;
-  transition: background-color 0.3s, color 0.3s;
+.about-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
 }
 
-.tab-item.active,
-.tab-item:hover {
+.tab-item {
+  cursor: pointer;
+  padding: 8px 16px;
+  border: 2px solid #00ff00;
+  border-radius: 6px;
+  background: transparent;
+  font-weight: 600;
+  font-family: 'Share Tech Mono', monospace;
+  color: #00ff00;
+  transition: background-color 0.3s, color 0.3s;
+  min-width: 100px;
+  text-align: center;
+}
+
+.tab-item:hover,
+.tab-item.active {
   background-color: #00ff00;
   color: #010a0a;
 }
 
 .tab-section {
   display: none;
+  padding-top: 20px;
+  padding-bottom: 40px;
 }
 
 .tab-section.active {
   display: block;
 }
 
+/* Fix tombol kosong/tab kosong */
+.tab-item:empty {
+  display: none;
+}
+
 /* About Section */
-#about {
-  margin-bottom: 50px;
-} 
 #about p {
   line-height: 1.6;
   font-size: 1.1rem;
