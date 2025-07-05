@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Art Killers</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Playfair+Display&family=Fira+Sans&family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="source/style.css" />
+</head>
+<body class="dark" data-theme-color="color-1" data-font="Georgia" oncontextmenu="return false;" oncopy="return false;" onselectstart="return false;">
+
+  <!-- Floating Action Group -->
+  <div class="fab-group">
+  <!-- Tombol Utama -->
+  <button id="fabMain" class="fab-main neumorphic">
+    <i class="fas fa-gear rotating-gear"></i>
+  </button>
+
+  <!-- Sub-Tombol -->
+  <div class="fab-sub hidden" id="fabSub">
+    <button id="menuToggle" class="fab-item neumorphic">
+      <i class="fas fa-bars"></i>
+    </button>
+    <button id="musicToggle" class="fab-item neumorphic">
+      <i class="fas fa-music"></i>
+    </button>
+    <button id="settingsToggle" class="fab-item neumorphic">
+      <i class="fas fa-pencil-alt"></i>
+    </button>
+  </div>
+  </div>
+
+  <!-- Floating Menu -->
+  <div id="menuPanel" class="menu-panel box-outer hidden">
+  <nav class="menu-nav box-inset">
+    <button class="neumorphic menu-btn" data-target=".profile-section">
+      <i class="fas fa-home"></i> Home
+    </button>
+    <button class="neumorphic menu-btn" data-target=".about-section">
+      <i class="fas fa-info-circle"></i> About 
+    </button>
+    <button class="neumorphic menu-btn" data-target=".shop-section">
+      <i class="fas fa-store"></i> Store
+    </button>
+    <button class="neumorphic menu-btn" data-target=".services-section">
+      <i class="fas fa-cogs"></i> Service
+    </button>
+    <button class="neumorphic menu-btn" data-target=".contact-section">
+      <i class="fas fa-envelope"></i> Contact
+    </button>
+  </nav>
+  </div>
+
+  <!-- Floating Settings -->
+  <div class="settings-panel box-outer hidden" id="settingsPanel">
+  <div class="settings box-inset">
+
+    <div class="setting-group">
+      <label>Color</label>
+      <div id="colorSelector" class="color-options">
+        <div class="color-swatch color-1" data-color="color-1"></div>
+        <div class="color-swatch color-2" data-color="color-2"></div>
+        <div class="color-swatch color-3" data-color="color-3"></div>
+        <div class="color-swatch color-4" data-color="color-4"></div>
+        <div class="color-swatch color-5" data-color="color-5"></div>
+      </div>
+    </div>
+
+    <div class="setting-group">
+      <label>Font</label>
+      <select id="fontSelector">
+        <option value="'Georgia', serif">Georgia</option>      
+        <option value="Montserrat">Montserrat</option>      
+        <option value="Roboto">Roboto</option>
+        <option value="'Segoe UI', sans-serif">Segoe UI</option>
+        <option value="'Courier New', monospace">Courier New</option>
+        <option value="'Comic Sans MS', cursive">Comic Sans</option>
+        <option value="'Trebuchet MS', sans-serif">Trebuchet</option>
+      </select>
+    </div>
+
+    <div class="setting-group">
+      <label>Theme</label>
+      <select id="themeSelector">
+        <option value="dark">Dark</option>
+        <option value="light">Light</option>
+      </select>
+    </div>
+
+  </div>
+  </div>
+
+  <!-- Floating Music Section -->
+  <section class="music-section box-outer" id="musicSection" style="display: none;">
+  <div class="music box-inset">
+    <div id="songTitle" class="song-title"> • • • </div>
+
+    <div class="controls">
+      <button class="btn-prev neumorphic" id="btnPrev" title="Previous Song">
+        <i class="fas fa-backward"></i>
+      </button>
+      <button class="btn-playpause neumorphic" id="btnPlayPause" title="Play/Pause">
+        <i class="fas fa-play" id="iconPlay"></i>
+        <i class="fas fa-pause" id="iconPause" style="display: none;"></i>
+      </button>
+      <button class="btn-next neumorphic" id="btnNext" title="Next Song">
+        <i class="fas fa-forward"></i>
+      </button>
+    </div>
+
+    <div class="progress-container box-inset" id="progressContainer">
+      <div class="progress" id="progress"></div>
+    </div>
+
+    <div class="time">
+      <span id="currentTime">00:00</span>
+      <span id="duration">00:00</span>
+    </div>
+  </div>
+  </section>
+
+  <!-- Preloader -->
+  <div class="preloader" id="Preloader">
+  <div class="preload box-outer" id="secretLoader" title="Secret Loader">
+    <i class="fas fa-gear rotating-gear"></i>
+  </div>
+  </div>
+ 
+    <!-- Profile Section -->
+    <header class="page">
+    <section class="profile-section box-outer">
+    <div class="profile-photo neumorphic">
+      <a href="#" onclick="location.reload();">
+        <span class="profile-icon">☠</span>
+      </a>
+    </div>   
+      <!-- Social Media -->
+      <div class="profile-socials">
+        <a href="#" target="_blank"><i class="fab fa-youtube neumorphic"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram neumorphic"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-telegram neumorphic"></i></a>
+        <a href="#"><i class="fas fa-envelope neumorphic"></i></a>
+      </div> 
+      <div class="profile-info">
+      <div class="profile-name">
+        <h1 class="glitch">ART KILLERS</h1>
+      </div>
+      <div class="typed-text"><span id="typed"></span></div>
+      <p class="profile-bio">
+      Celebrating the artistic and cultural heritage that has existed since ancient times, makes us really like challenges & learning new things in the rapid development of technology, as I believe that ongoing learning is key to progress.
+      </p>      
+     </div>
+     </section>
+     
+     <section class="about-section box-outer hidden">
+     <i class="fas fa-info-circle" title="about"></i>
+     <h2>About Me</h2>
+  
+     <p class="about-bio">
+     Since ancient times, art and cultural heritage have served as a mirror of human civilization — capturing the long journey of our values, identity, and creativity. In today’s fast-paced digital era, I see a unique opportunity to bridge timeless cultural values with modern innovation.<br><br>
+
+     My passion for art and culture goes beyond admiring visual beauty or historical significance. It is a personal commitment to preserve and reimagine their essence in a rapidly evolving world. I believe that culture and technology are not opposing forces, but rather two powerful elements that, when aligned, can inspire progress while honoring tradition.<br><br>
+
+     This website was born out of that vision. It serves as a space where my personal creativity and fashion lifestyle intersect. Here, I share my work, insights, and curated fashion items—ranging from clothing to accessories—all of which reflect my own aesthetic values.<br><br>
+
+     Each product I offer is more than just an item; it represents a personal narrative—comfortable, distinct, and confidently stylish. This platform is not only a store, but also a window into my creative world, built to inspire and connect.
+     </p>
+     
+      <!-- About Tabs -->
+      <div class="about-tabs">
+        <span class="tab-item neumorphic active" data-target=".skills">Skills</span>
+        <span class="tab-item neumorphic" data-target=".experience">Experience</span>
+        <span class="tab-item neumorphic" data-target=".education">Education</span>
+      </div>
+
+      <!-- Skills -->
+      <div class="tab-content skills active">
+        <div class="timeline">
+          <div class="timeline-item box-inset">
+            <i class="fas fa-object-group icon"></i>
+            <span>Self-Taught</span>
+            <h3>Designer & Development</h3>
+          </div>
+          <div class="timeline-item box-inset">
+            <i class="fas fa-screwdriver-wrench icon"></i>
+            <span>Self-Taught</span>
+            <h3>Repair & Maintenance</h3>
+          </div>
+          <div class="timeline-item box-inset">
+            <i class="fas fa-terminal icon"></i>
+            <span>Self-Taught</span>
+            <h3>Code Programmer</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience -->
+      <div class="tab-content experience">
+        <div class="timeline">
+          <div class="timeline-item box-inset">
+            <i class="fas fa-chart-line icon"></i>
+            <span>Freelance</span>
+            <h3>Digital Marketing SEO</h3>
+          </div>
+          <div class="timeline-item box-inset">
+            <i class="fas fa-user-edit icon"></i>
+            <span>Volunteer</span>
+            <h3>Personal Branding</h3>
+          </div>
+          <div class="timeline-item box-inset">
+            <i class="fas fa-laptop-code icon"></i>
+            <span>Projects</span>
+            <h3>UI/UX Web Designer</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="tab-content education">
+        <div class="timeline">
+          <div class="timeline-item box-inset">
+            <i class="fas fa-graduation-cap icon"></i>
+            <span>Informal</span>
+            <h3>Vocational High School</h3>
+          </div>
+          <div class="timeline-item box-inset">
+            <i class="fas fa-certificate icon"></i>
+            <span>Informal</span>
+            <h3>Middle School</h3>
+          </div>
+          <div class="timeline-item box-inset">
+            <i class="fas fa-book icon"></i>
+            <span>Informal</span>
+            <h3>Elementary School</h3>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- Shop Section -->
+  <section class="shop-section box-outer hidden">
+  <i class="fas fa-shop" title="market"></i>
+  <h2>Online Store</h2>
+
+  <!-- Kategori Navigasi -->
+  <nav class="shop-categories">
+    <button class="neumorphic" data-category="clothes">Clothes</button>
+    <button class="neumorphic" data-category="trousers">Trousers</button>
+    <button class="neumorphic" data-category="accessories">Accessories</button>
+  </nav>
+
+  <!-- Produk -->
+  <div class="scroll-wrapper box-inset">
+    <div class="scroll-container" id="productScroll">
+
+      <!-- Clothes -->
+      <div class="product-item" data-category="clothes">
+        <img src="image/visual-01.png" alt="clothes">
+        <h3>Clothes Apparel</h3>
+        <p>IDR 50.000</p>
+        <a href="#" class="order-btn neumorphic add-to-cart-btn">Add to Cart</a>
+      </div>
+      <div class="product-item" data-category="clothes">
+        <img src="image/visual-02.png" alt="clothes">
+        <h3>Clothes Border</h3>
+        <p>IDR 50.000</p>
+        <a href="#" class="order-btn neumorphic add-to-cart-btn">Add to Cart</a>
+      </div>
+      <div class="product-item" data-category="clothes">
+        <img src="image/visual-03.png" alt="clothes">
+        <h3>Clothes Cottage</h3>
+        <p>IDR 50.000</p>
+        <a href="#" class="order-btn neumorphic add-to-cart-btn">Add to Cart</a>
+      </div>
+
+      <!-- Trousers -->
+      <div class="product-item" data-category="trousers">
+        <img src="image/visual-01.png" alt="trousers">
+        <h3>Trousers Slider</h3>
+        <p>IDR 50.000</p>
+        <a href="#" class="order-btn neumorphic add-to-cart-btn">Add to Cart</a>
+      </div>
+      <div class="product-item" data-category="trousers">
+        <img src="image/visual-02.png" alt="trousers">
+        <h3>Trousers Bounty</h3>
+        <p>IDR 50.000</p>
+        <a href="#" class="order-btn neumorphic add-to-cart-btn">Add to Cart</a>
+      </div>
+      <div class="product-item" data-category="trousers">
+        <img src="image/visual-03.png" alt="trousers">
+        <h3>Trousers Core</h3>
+        <p>IDR 50.000</p>
+        <a href="#" class="order-btn neumorphic add-to-cart-btn">Add to Cart</a>
+      </div>
+
+      <!-- Accessories -->
+      <div class="product-item" data-category="accessories">
+        <img src="image/visual-01.png" alt="accessories">
+        <h3>Finger Rings</h3>
+        <p>IDR 50.000</p>
+        <a href="#" class="order-btn neumorphic add-to-cart-btn">Add to Cart</a>
+      </div>
+      <div class="product-item" data-category="accessories">
+        <img src="image/visual-02.png" alt="accessories">
+        <h3>Watches</h3>
+        <p>IDR 50.000</p>
+        <a href="#" class="order-btn neumorphic add-to-cart-btn">Add to Cart</a>
+      </div>
+      <div class="product-item" data-category="accessories">
+        <img src="image/visual-03.png" alt="accessories">
+        <h3>Necklaces</h3>
+        <p>IDR 50.000</p>
+        <a href="#" class="order-btn neumorphic add-to-cart-btn">Add to Cart</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Controls & Cart -->
+  <div class="scroll-buttons">
+    <button id="prevBtn" class="neumorphic" onclick="scrollLeft()">←</button>
+    <button id="nextBtn" class="neumorphic" onclick="scrollRight()">→</button>
+  </div>
+
+  <div class="cart-scroll box-inset">
+    <ul id="cart-list"></ul>
+    <p id="empty-cart">" your cart is empty "</p>
+  </div>
+
+  <p id="cart-total">Total : IDR 0</p>
+
+  <div class="cart-actions">
+    <a id="whatsapp-link" href="#" class="neumorphic" target="_blank" style="display: inline-block;">Order Now</a>
+    <button id="clear-cart" class="neumorphic">Cancel All</button>
+  </div>
+  </section>
+  
+  <!-- Services Section -->
+  <section id="services" class="services-section box-outer hidden">
+  <i class="fas fa-cogs"></i> 
+  <h2>What Our Do</h2> 
+  <div class="services-grid"> 
+    <div class="services-card box-inset">
+      <i class="fas fa-tshirt"></i>
+      <h3>Fashion Creativity</h3>
+      <p>Providing a personally curated selection of clothing and accessories, reflecting a style that is comfortable, unique and full of character.</p>
+    </div>
+    <div class="services-card box-inset">
+      <i class="fas fa-shopping-cart"></i>
+      <h3>Order Products</h3>
+      <p>Make it easy to order your choice of fashion products with a fast and convenient process, directly from this website.</p>
+    </div>
+    <div class="services-card box-inset">
+      <i class="fas fa-truck"></i>
+      <h3>Logistics Delivery</h3>
+      <p>Product delivery to your address with reliable and timely service, guaranteeing online shopping satisfaction.</p>
+    </div>
+    <div class="services-card box-inset">
+      <i class="fas fa-headset"></i>
+      <h3>Customer Service</h3>
+      <p>Providing support and consultation at any time, helping to resolve questions or issues regarding products and services.</p>
+    </div>
+  </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section box-outer hidden">
+    <i class="fas fa-envelope"></i>
+    <h2>Get In Touch</h2>
+    <div class="contact-container">
+    <div class="contact-item box-outer">
+      <i class="fas fa-globe"></i>
+      <p>Indonesia</p>
+    </div>
+    <div class="contact-item box-outer">
+      <i class="fas fa-phone"></i>
+      <p>+62 877 0310 1998</p>
+    </div>
+    <div class="contact-item box-outer">
+      <i class="fas fa-pen"></i>
+      <p>artkillers@gmail.com</p>
+    </div>
+    </div>
+    <form id="contactForm" class="contact-form">
+      <label for="name"></label>
+      <input class="box-inset" type="text" id="name" name="name" placeholder="Name" required>
+
+      <label for="email"></label>
+      <input class="box-inset" type="email" id="email" name="email" placeholder="Email" required>
+
+      <label for="subject"></label>
+      <input class="box-inset" type="subject" id="subject" name="subject" placeholder="Subject" required>
+
+      <label for="message"></label>
+      <textarea class="box-inset" id="message" name="message" rows="4" placeholder="Message" required></textarea>
+
+      <button class="neumorphic" type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Daily Routine -->
+  <div class="daily-routine box-outer">
+    <div class="routine-icons">
+      <i class="fas fa-bed box-inset" title="sleep"></i>
+      <i class="fas fa-shower box-inset" title="bathe"></i>
+      <i class="fas fa-utensils box-inset" title="food"></i>
+      <i class="fas fa-gamepad box-inset" title="game"></i>
+      <i class="fas fa-redo-alt box-inset" title="repeat"></i>
+    </div>
+
+    <p class="routine-quote">
+      All these activities are considered legitimate because they fall under the "rules" or principles
+      of individual freedom and expression, and are symbolically or culturally protected by the community
+      or society in the "scene".
+    </p>
+
+    <footer class="neumorphic">
+      <a href="https://artkillers.github.io">© Art Killers • All Rights Reserved.</a>
+    </footer>
+  </div>
+</header>
+    
+<audio id="audio" preload="metadata"></audio>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="source/script.js"></script>
+</body>
+</html>
