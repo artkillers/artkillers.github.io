@@ -327,7 +327,7 @@ body.dark .box-inset {
   padding: 2rem;
   font-size: 12px;
   font-style: italic;
-  color: var(--text-color);
+  color: var(--theme-color);
 }
 
 .controls {
@@ -361,7 +361,7 @@ body.dark .box-inset {
   display: flex;
   justify-content: space-between;
   font-size: 12px;
-  color: var(--text-color);
+  color: var(--theme-color);
   padding: 0.9rem;
 }
 
@@ -1065,8 +1065,8 @@ footer a {
   padding: 15px;
   font-family: var(--font);
   border: none;
-  background: rgba(255, 255, 255, 0.15);
-  color: var(--text-color);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--theme-color);
   font-size: 10px;
   outline: none;
   box-shadow: var(--shadow);
@@ -1074,19 +1074,19 @@ footer a {
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-  color: var(--text-color);
+  color: var(--theme-color);
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .contact-form button {
   font-family: var(--font);
   margin-top: 15px;
   padding: 15px;
-  color: var(--text-color);
+  color: var(--theme-color);
   border: none;
   font-weight: bold;
   font-size: 12px;
@@ -1111,12 +1111,61 @@ footer a {
 
 .contact-item i {
   font-size: 12px;
-  color: var(--text-color);
+  color: var(--theme-color);
   margin-bottom: 25px;
 }
 
 .contact-item p {
   margin: 0;
   font-size: 10px;
-  color: var(--text-color);
+  color: var(--theme-color);
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.search-bar input::placeholder {
+  color: var(--theme-color);
+}
+
+.search-bar input {
+  flex: 1;
+  height: 50px;
+  padding: 0 15px;
+  font-size: 12px;
+  color: var(--theme-color);
+  box-shadow: var(--shadow-inset-light);
+  border-radius: var(--radius);
+  border: none;
+  background: none;
+  outline: none;
+}
+
+body.dark .search-bar input {
+  box-shadow: var(--shadow-inset-dark);
+}
+
+.search-bar input:focus {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.search-btn {
+  width: 50px;
+  height: 50px;
+  color: var(--theme-color);
+  border: none;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.search-btn i {
+  font-size: 20px;
+  margin: 0 auto;
 }

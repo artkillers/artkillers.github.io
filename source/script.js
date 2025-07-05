@@ -60,6 +60,15 @@ document.addEventListener('click', (e) => {
   const clearCartBtn = document.getElementById('clear-cart');
   const prevBtn = document.getElementById('prevBtn');
   const nextBtn = document.getElementById('nextBtn');
+  
+  function searchItems() {
+  const input = document.getElementById('searchInput').value.toLowerCase();
+  
+  allItems.forEach(item => {
+    const productName = item.querySelector('h3').textContent.toLowerCase();
+    item.style.display = productName.includes(input) ? 'flex' : 'none';
+  });
+  }
 
   let currentCategory = 'clothes';
   let currentIndex = 0;
@@ -96,6 +105,8 @@ document.addEventListener('click', (e) => {
   });
 
   window.addEventListener('DOMContentLoaded', showCurrentItem);
+  
+  document.getElementById('searchInput').addEventListener('input', searchItems);
 
   function updateCart() {
     const cartItems = cartList.querySelectorAll('li');
@@ -372,7 +383,7 @@ document.addEventListener('click', (e) => {
       form.reset();
     });
   }
-
+        
   // Disable right-click, text select and copy
   document.addEventListener("contextmenu", e => e.preventDefault());
   document.addEventListener("selectstart", e => e.preventDefault());
