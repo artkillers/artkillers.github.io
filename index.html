@@ -50,9 +50,13 @@
   <!-- ===== Preload Overlay ===== -->
   <div id="preload" class="preload">
     <div class="preloader">
-      <i class="fas fa-gear"></i>
+      <i class="fas fa-gears"></i>
     </div>
   </div>
+  
+  <audio id="bg-audio" loop>
+    <source src="assets/audio/audio.mp3" type="audio/mpeg">
+  </audio>
 
   <!-- ===== Floating Cart Panel ===== -->
   <div id="cartPanel" class="cart-panel hidden">
@@ -419,6 +423,26 @@
       "https://twitter.com/artkillers"
     ]
   }
+</script>
+
+<!-- Audio Interface -->
+<script>
+  const audio = document.getElementById("bg-audio");
+  let isPlaying = false;
+
+  function playAudio() {
+    if (!isPlaying) {
+      audio.play().then(() => {
+        isPlaying = true;
+        console.log("Audio started");
+      }).catch(err => {
+        console.log("Autoplay blocked:", err);
+      });
+    }
+  }
+
+  document.addEventListener("click", playAudio, { once: true });
+  document.addEventListener("scroll", playAudio, { once: true });
 </script>
 
 <!-- Navigator Geolocation -->
