@@ -128,35 +128,35 @@ section {
   }
 }
 
-  .preload {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--gradient);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    transition: opacity 0.6s ease, visibility 0.6s ease;
-  }
+.preload {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
 
-  .preload.hide {
-    opacity: 0;
-    visibility: hidden;
-  }
+.preload.hide {
+  opacity: 0;
+  visibility: hidden;
+}
 
-  .preloader i {
-    font-size: 3rem;
-    color: var(--color);
-    animation: spin 1.5s linear infinite;
-  }
+.preloader i {
+  font-size: 5rem;
+  color: var(--color);
+  animation: spin 1.5s linear infinite;
+}
 
-  @keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
 
 @keyframes pulse {
   0% { transform: scale(1); opacity: 0.4; }
