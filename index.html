@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Art Killers – Digital Branding & Creative Studio</title>
+
+  <!-- Meta SEO -->
+  <meta name="description" content="Art Killers  adalah studio digital kreatif yang menyatukan branding, estetika budaya, dan pendekatan psikologi untuk membangun identitas personal maupun bisnis." />
+  <meta name="keywords" content="Art Killers, branding, desain kreatif, personal branding, digital studio, fashion, toko online, Indonesia, Nusantara, psikologi visual, UI/UX, web design, SEO" />
+  <meta name="author" content="Art Killers  Team" />
+  <meta name="robots" content="index, follow" />
+  <meta http-equiv="Content-Language" content="id" />
+  <link rel="canonical" href="https://artkillers.github.io/" />
+  <meta name="theme-color" content="#000000" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Art Killers  – Digital Branding & Creative Studio" />
+  <meta property="og:description" content="Studio kreatif yang menggabungkan seni, budaya, dan teknologi untuk membangun branding yang berkarakter dan mendalam." />
+  <meta property="og:image" content="https://artkillers.github.io/assets/image/profile/logo.png" />
+  <meta property="og:url" content="https://artkillers.github.io/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Art Killers  – Studio Branding Digital" />
+  <meta name="twitter:description" content="Bangun citra dan karakter melalui desain, budaya, dan psikologi visual." />
+  <meta name="twitter:image" content="https://artkillers.github.io/assets/image/profile/logo.png" />
+  
+  <!-- Google Adsense -->
+  <meta name="google-adsense-account" content="ca-pub-1816956214705174">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1816956214705174" crossorigin="anonymous"></script>
+
+  <!-- Icons -->
+  <link rel="icon" href="assets/image/profile/logo.png" type="image/png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/image/profile/logo.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/image/profile/logo.png" />
+
+  <!-- Fonts & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Georgia&family=Playfair+Display&family=Fira+Sans&family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="source/style.css">
+  <script src="core.js"></script>
+
+</head>
+<body oncontextmenu="return false;" oncopy="return false;" onselectstart="return false;">
+
+  <!-- ===== Preload Overlay ===== -->
+  <div id="preload" class="preload">
+    <div class="preloader">
+      <i class="fas fa-gear"></i>
+    </div>
+  </div>
+  
+  <audio id="bg-audio" loop>
+    <source src="assets/audio/audio.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- ===== Floating Cart Panel ===== -->
+  <div id="cartPanel" class="cart-panel hidden">
+    <div class="cart-header">
+      <button id="closeCart" class="close-btn button">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <div class="cart-content">
+      <div class="cart-user inset">
+        <i class="fas fa-map-marker-alt" title="Location"></i>
+        <span id="user-full">Suburb, City, Region, Country</span>
+      </div>
+      <div class="cart-scroll inset">
+        <ul id="cart-list"></ul>
+        <p id="empty-cart">“ your cart is empty ”</p>
+      </div>
+      <div class="inset">
+        <p id="cart-total">Total : IDR 0</p>
+      </div>
+      <div class="cart-actions">
+        <a id="whatsapp-link" href="#" class="button" target="_blank">Order Now</a>
+        <button id="clear-cart" class="button">Cancel All</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Floating Hamburger ===== -->
+  <div class="hamburger button" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <!-- ===== Floating Menu ===== -->
+  <div id="menuPanel" class="menu-panel hidden">
+    <div class="menu-header">
+      <button id="closeMenu" class="close-btn button">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <nav class="menu-nav inset">
+      <button class="button menu-btn" data-target="#home"><i class="fas fa-home"></i> Home</button>
+      <button class="button menu-btn" data-target="#about"><i class="fas fa-info-circle"></i> About</button>
+      <button class="button menu-btn" data-target="#shop"><i class="fas fa-shop"></i> Market</button>
+      <button class="button menu-btn" data-target="#services"><i class="fas fa-gears"></i> Services</button>
+      <button class="button menu-btn" data-target="#testimonial"><i class="fas fa-comments"></i> Testimonial</button>
+      <button class="button menu-btn" data-target="#contact"><i class="fas fa-envelope"></i> Contact</button>
+    </nav>
+  </div>
+
+  <!-- ===== Home Section ===== -->
+  <section id="home" class="home-section">
+    <div class="home-photo">
+      <a href="#" class="home-icon">
+        <img src="assets/image/profile/logo.png" alt="artkillers" />
+      </a>
+    </div>
+    <div class="home-info">
+      <div class="home-name">
+        <h1 class="glitch">ART KILLERS</h1>
+      </div>
+      <div class="typed-text" translate="no">
+        <span id="typed"></span>
+      </div>
+      <!-- Social Media -->
+      <div class="home-socials">
+        <a href="#" target="_blank"><i class="fab fa-youtube button"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram button"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-telegram button"></i></a>
+        <a href="#"><i class="fas fa-envelope button"></i></a>
+      </div>
+      <p class="home-bio">
+        Kami tidak berjalan mengikuti arus, kami menciptakan arusnya. Setiap langkah kami adalah perhitungan. Kami tidak hadir untuk sekadar mengikuti perubahan. Kami hadir untuk memaksa perubahan itu menyesuaikan diri dengan tujuan kami, bahwa kami tidak tunduk pada keadaan, justru keadaanlah yang tunduk pada cara kami memandangnya.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== About Section ===== -->
+  <section id="about" class="about-section hidden">
+    <i class="fas fa-info-circle" title="about"></i>
+    <h2>About Us</h2>
+    
+    <div class="about-photo">
+      <a href="#" class="about-icon">
+        <img src="assets/image/profile/about.png" alt="artkillers" />
+      </a>
+    </div>
+    
+    <p class="about-bio">
+      Kami berdiri bukan karena kesempatan, melainkan karena keputusan. Setiap langkah yang diambil adalah hasil perhitungan; setiap karya yang muncul adalah konsekuensi dari tekad. Kami tidak mencari panggung yang ramai — kami menciptakan ruang di mana pandangan dan ide dapat bergerak dengan tenang namun pasti.
+      <br><br>
+      Seni, bagi kami, bukan sekadar bentuk. Ia adalah bahasa yang dapat menenangkan sekaligus mengguncang, yang mampu membuka pintu diplomasi atau menutup jalan bagi mereka yang tak memahami isyaratnya. Dalam setiap garis dan warna, ada pesan yang disusun hati-hati, ada strategi yang disimpan rapi.
+      <br><br>
+      Kami tidak menawarkan sekadar desain, melainkan arah. Kami tidak sekadar membuat tampilan, melainkan menciptakan kesan yang bertahan. Dunia boleh bergerak cepat, namun kami memilih berjalan dengan ritme sendiri — cukup lambat untuk memahami, cukup cepat untuk menguasai.
+      <br><br>
+      Website ini bukan sekadar galeri. Ini adalah catatan posisi kami, ruang yang menunjukkan bahwa setiap detail telah melalui pemikiran, dan setiap karya membawa konsekuensi. Kami tidak menunggu dunia menerima kami, tapi kami memastikan dunia menyesuaikan diri dengan cara kami memandangnya.
+    </p>
+
+    <!-- Tabs -->
+    <div class="about-tabs">
+      <span class="tab-item button active" data-target=".skills">Expertise</span>
+      <span class="tab-item button" data-target=".experiences">Operations</span>
+      <span class="tab-item button" data-target=".projects">Initiatives</span>
+    </div>
+
+    <!-- Skills Tab -->
+    <div class="tab-content skills active">
+      <div class="timeline">
+        <div class="timeline-item inset">
+          <i class="fas fa-chess-knight icon"></i>
+          <span>Strategic Maneuver</span>
+          <h3>Membaca situasi, menyusup ke dalam sistem, dan mengendalikan jalannya permainan.</h3>
+        </div>
+        <div class="timeline-item inset">
+          <i class="fas fa-feather-alt icon"></i>
+          <span>Narrative Influence</span>
+          <h3>Menggerakkan opini publik melalui bahasa, estetika, dan citra yang dibangun dengan presisi.</h3>
+        </div>
+        <div class="timeline-item inset">
+          <i class="fas fa-gem icon"></i>
+          <span>Value Transformation</span>
+          <h3>Mengangkat hal biasa menjadi karya bernilai tinggi yang tak tergantikan.</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- Experiences Tab -->
+    <div class="tab-content experiences">
+      <div class="timeline">
+        <div class="timeline-item inset">
+          <i class="fas fa-eye icon"></i>
+          <span>Silent Operations</span>
+          <h3>Eksekusi di lapangan dengan presisi, memastikan pengaruh terbentuk tanpa banyak suara.</h3>
+        </div>
+        <div class="timeline-item inset">
+          <i class="fas fa-globe icon"></i>
+          <span>Network Expansion</span>
+          <h3>Membangun jembatan dari lingkaran kecil ke ranah global dengan langkah terukur.</h3>
+        </div>
+        <div class="timeline-item inset">
+          <i class="fas fa-bullseye icon"></i>
+          <span>Calculated Domination</span>
+          <h3>Mengambil alih kendali melalui distribusi yang rapih dan kontrol penuh atas jalur utama.</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects Tab -->
+    <div class="tab-content projects">
+      <div class="timeline">
+        <div class="timeline-item inset">
+          <i class="fas fa-mask icon"></i>
+          <span>Private Assemblies</span>
+          <h3>Pertemuan terbatas dengan atmosfer eksklusif untuk membangun koneksi strategis.</h3>
+        </div>
+        <div class="timeline-item inset">
+          <i class="fas fa-briefcase icon"></i>
+          <span>Curated Exchange</span>
+          <h3>Platform perdagangan khusus, dengan kurasi ketat demi menjaga otentisitas.</h3>
+        </div>
+        <div class="timeline-item inset">
+          <i class="fas fa-network-wired icon"></i>
+          <span>Shadow Network</span>
+          <h3>Membangun infrastruktur yang memadai, tempat strategi, pengetahuan, dan pengaruh bertemu.</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Shop Section ===== -->
+  <section id="shop" class="shop-section hidden">
+    <i class="fas fa-shop" title="market"></i>
+    <h2>Market Supply</h2>
+
+    <!-- Kategori -->
+    <nav class="shop-categories">
+      <button class="button" data-category="product-1">Premium</button>
+      <button class="button" data-category="product-2">Reguler</button>
+      <button class="button" data-category="product-3">Ekonomis</button>
+    </nav>
+
+    <!-- Search -->
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search Product . . ." aria-label="Search product"/>  
+      <button class="search-btn button" aria-label="Search" id="searchBtn">
+        <i class="fas fa-search"></i>
+      </button>
+      <button class="cart-btn button" aria-label="Open cart" id="cartBtn">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cartBadge" class="cart-badge">0</span>
+      </button>
+    </div>
+
+    <!-- Produk -->
+    <div class="scroll-wrapper inset">
+      <div class="scroll-container" id="productScroll"></div>
+    </div>
+
+    <!-- Navigasi -->
+    <div class="scroll-buttons">
+      <button id="prevBtn" class="button">←</button>
+      <button id="nextBtn" class="button">→</button>
+    </div>
+  </section>
+
+  <!-- ===== Services Section ===== -->
+  <section id="services" class="services-section hidden">
+    <i class="fas fa-gear"></i>
+    <h2>Strategic Services</h2>
+    <div class="services-grid">
+
+      <div class="services-card inset">
+        <i class="fas fa-chess icon"></i>
+        <h3>Calculated Planning</h3>
+        <p>Setiap langkah dirancang dengan perhitungan matang — tidak ada ruang untuk kebetulan.</p>
+      </div>
+
+      <div class="services-card inset">
+        <i class="fas fa-feather-alt icon"></i>
+        <h3>Identity Crafting</h3>
+        <p>Membangun citra, narasi, dan estetika yang menjadi senjata diplomasi maupun pengaruh.</p>
+      </div>
+
+      <div class="services-card inset">
+        <i class="fas fa-globe icon"></i>
+        <h3>Network Expansion</h3>
+        <p>Menghubungkan lingkaran kecil dengan panggung global melalui relasi dan distribusi aman.</p>
+      </div>
+
+      <div class="services-card inset">
+        <i class="fas fa-gem icon"></i>
+        <h3>Value Refinement</h3>
+        <p>Mengubah sesuatu yang biasa menjadi simbol prestise dengan nilai yang berlipat.</p>
+      </div>
+
+      <div class="services-card inset">
+        <i class="fas fa-shield-alt icon"></i>
+        <h3>Secure Operations</h3>
+        <p>Menjamin kerahasiaan, presisi, dan keamanan dalam setiap pengiriman maupun transaksi.</p>
+      </div>
+
+      <div class="services-card inset">
+        <i class="fas fa-handshake icon"></i>
+        <h3>Diplomatic Liaison</h3>
+        <p>Menjadi perantara yang menjaga stabilitas, memastikan setiap kesepakatan berjalan mulus.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== Testimonials Section ===== -->
+  <section id="testimonial" class="testimonial-section hidden">
+    <i class="fas fa-comments"></i>
+    <h2>Testimonial</h2>
+
+    <div class="testimonial-grid">
+
+      <div class="testimonial-card inset">
+        <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="Client">
+        <h3>The Iron Broker</h3>
+        <p>“ Mereka tidak sekadar bekerja — mereka membaca permainan, lalu mengubah aturannya. Sebuah langkah yang membuat lawan tak punya pilihan selain mengikuti. ”</p>
+      </div>
+
+      <div class="testimonial-card inset">
+        <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="Client">
+        <h3>Velvet Circle</h3>
+        <p>“ Dalam dunia penuh kebisingan, mereka memilih diam. Dan justru dari diam itu, lahir pengaruh yang tak terbantahkan. ”</p>
+      </div>
+
+      <div class="testimonial-card inset">
+        <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="Client">
+        <h3>Silver Dominion</h3>
+        <p>“ Bukan sekadar layanan — ini strategi. Setiap detail mereka olah seperti pion yang akhirnya membuka jalan menuju kemenangan. ”</p>
+      </div>
+
+      <div class="testimonial-card inset">
+        <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="Client">
+        <h3>The Silent Accord</h3>
+        <p>“ Mereka hadir bukan untuk terlihat, tapi untuk memastikan hasil. Dan hasil itulah yang membuat nama mereka selalu dibicarakan. ”</p>
+      </div>
+
+      <div class="testimonial-card inset">
+        <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="Client">
+        <h3>Obsidian Order</h3>
+        <p>“ Gabungan disiplin, estetika, dan kendali. Mereka bukan hanya mitra, mereka adalah faktor penentu. ”</p>
+      </div>
+
+      <div class="testimonial-card inset">
+        <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="Client">
+        <h3>The Grand Union</h3>
+        <p>“ Kerja sama dengan mereka tidak pernah setengah jalan. Ketika mereka bergerak, hasilnya sudah pasti. ”</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== Contact Section ===== -->
+  <section id="contact" class="contact-section hidden">
+    <i class="fas fa-envelope"></i>
+    <h2>Get In Touch</h2>
+
+    <div class="contact-container">
+      <div class="contact-item outer">
+        <i class="fas fa-globe"></i>
+        <p>Eastern Indonesia</p>
+      </div>
+      <div class="contact-item outer">
+        <i class="fas fa-phone"></i>
+        <p>+62 823-4319-1193</p>
+      </div>
+      <div class="contact-item outer">
+        <i class="fas fa-pen"></i>
+        <p>wisdomreactly@gmail.com</p>
+      </div>
+    </div>
+
+    <form id="contactForm" class="contact-form">
+      <input class="inset" type="text" id="name" name="name" placeholder="Name" required />
+      <input class="inset" type="email" id="email" name="email" placeholder="Email" required />
+      <input class="inset" type="text" id="subject" name="subject" placeholder="Subject" required />
+      <textarea class="inset" id="message" name="message" rows="4" placeholder="Message" required></textarea>
+      <button class="button" type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <div class="footer-routine outer">
+    <div class="footer-icons">
+      <i class="fas fa-bed inset" title="sleep"></i>
+      <i class="fas fa-shower inset" title="bathe"></i>
+      <i class="fas fa-utensils inset" title="food"></i>
+      <i class="fas fa-gamepad inset" title="game"></i>
+      <i class="fas fa-redo-alt inset" title="repeat"></i>
+    </div>
+
+    <p class="footer-quote">
+      Semua kegiatan ini dianggap sah karena berada di bawah "aturan" atau prinsip kebebasan dan ekspresi individu, 
+      dan secara simbolis atau budaya dilindungi oleh masyarakat.
+    </p>
+
+    <footer class="button">
+      <a href="#">© Art Killers  • Creative Studio</a>
+    </footer>
+  </div>
+
+<!-- Library Typed.js -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<!-- Script Main -->
+<script src="source/script.js"></script>
+
+<!-- Schema.org JSON-LD -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Art Killers",
+    "url": "https://artkillers.github.io/",
+    "logo": "https://artkillers.github.io/assets/image/profile/logo.png",
+    "description": "Art Killers adalah studio digital kreatif yang menyatukan branding, estetika budaya, dan pendekatan psikologi untuk membangun identitas personal maupun bisnis.",
+    "sameAs": [
+      "https://www.facebook.com/artkillers",
+      "https://www.instagram.com/artkillers",
+      "https://twitter.com/artkillers"
+    ]
+  }
+</script>
+
+<!-- Audio Interface -->
+<script>
+  const audio = document.getElementById("bg-audio");
+  let isPlaying = false;
+
+  function playAudio() {
+    if (!isPlaying) {
+      audio.play().then(() => {
+        isPlaying = true;
+        console.log("Audio started");
+      }).catch(err => {
+        console.log("Autoplay blocked:", err);
+      });
+    }
+  }
+
+  document.addEventListener("click", playAudio, { once: true });
+  document.addEventListener("scroll", playAudio, { once: true });
+</script>
+
+<!-- Navigator Geolocation -->
+<script>
+if (navigator.geolocation) {
+navigator.geolocation.getCurrentPosition(async function(position) {
+const lat = position.coords.latitude;
+const lon = position.coords.longitude;
+
+try {
+const response = await fetch(`https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lon}&format=json`);
+const data = await response.json();
+
+if (data && data.display_name) {
+document.getElementById("user-full").innerText = data.display_name;
+} else {
+document.getElementById("user-full").innerText = `Lat: ${lat.toFixed(4)}, Lon: ${lon.toFixed(4)}`;
+}
+} catch (error) {
+document.getElementById("user-full").innerText = "Gagal ambil alamat";
+}
+}, function(error) {
+document.getElementById("user-full").innerText = "Tidak bisa ambil lokasi";
+});
+} else {
+document.getElementById("user-full").innerText = "Browser tidak support";
+}
+</script>  
+</body>
+</html>

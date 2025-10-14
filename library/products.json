@@ -1,0 +1,25 @@
+[
+  { "name": "50gram P-100", "price": 50000, "category": "product-1", "image": "assets/image/product/premium.png" },
+  { "name": "100gram P-101", "price": 100000, "category": "product-1", "image": "assets/image/product/premium.png" },
+  { "name": "150gram P-102", "price": 150000, "category": "product-1", "image": "assets/image/product/premium.png" },
+  { "name": "200gram P-103", "price": 200000, "category": "product-1", "image": "assets/image/product/premium.png" },
+  { "name": "250gram P-104", "price": 250000, "category": "product-1", "image": "assets/image/product/premium.png" },
+  { "name": "500gram P-105", "price": 500000, "category": "product-1", "image": "assets/image/product/premium.png" },
+  { "name": "1kg P-106", "price": 1000000, "category": "product-1", "image": "assets/image/product/premium.png" },
+
+  { "name": "50gram R-200", "price": 50000, "category": "product-2", "image": "assets/image/product/reguler.png" },
+  { "name": "100gram R-201", "price": 100000, "category": "product-2", "image": "assets/image/product/reguler.png" },
+  { "name": "150gram R-202", "price": 150000, "category": "product-2", "image": "assets/image/product/reguler.png" },
+  { "name": "200gram R-203", "price": 200000, "category": "product-2", "image": "assets/image/product/reguler.png" },
+  { "name": "250gram R-204", "price": 250000, "category": "product-2", "image": "assets/image/product/reguler.png" },
+  { "name": "500gram R-205", "price": 500000, "category": "product-2", "image": "assets/image/product/reguler.png" },
+  { "name": "1kg R-206", "price": 1000000, "category": "product-2", "image": "assets/image/product/reguler.png" },
+
+  { "name": "50gram E-300", "price": 50000, "category": "product-3", "image": "assets/image/product/ekonomis.png" },
+  { "name": "100gram E-301", "price": 100000, "category": "product-3", "image": "assets/image/product/ekonomis.png" },
+  { "name": "150gram E-302", "price": 150000, "category": "product-3", "image": "assets/image/product/ekonomis.png" },
+  { "name": "200gram E-303", "price": 200000, "category": "product-3", "image": "assets/image/product/ekonomis.png" },
+  { "name": "250gram E-304", "price": 250000, "category": "product-3", "image": "assets/image/product/ekonomis.png" },
+  { "name": "500gram E-305", "price": 500000, "category": "product-3", "image": "assets/image/product/ekonomis.png" },
+  { "name": "1kg E-306", "price": 1000000, "category": "product-3", "image": "assets/image/product/ekonomis.png" }
+]
