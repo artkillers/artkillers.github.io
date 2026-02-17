@@ -10,8 +10,8 @@
   --border: -4px -4px 8px rgba(255,255,255, 0.01);
   --shadow: rgba(255, 255, 255, 0.05);
   --gradient: linear-gradient(125deg, #a67b5b, #c3a18f);
-  --inset: inset 4px 4px 8px rgba(0,0,0,0.4), inset -4px -4px 8px rgba(255,255,255,0.2);
-  --outer: 4px 4px 8px rgba(0,0,0,0.3), -4px -4px 8px rgba(255,255,255,0.1);
+  --inset: inset 3px 3px 6px rgba(0,0,0,0.6), inset -3px -3px 6px rgba(255,255,255,0.3);
+  --outer: 3px 3px 6px rgba(0,0,0,0.6), -3px -3px 6px rgba(255,255,255,0.3);
 }
 
 * {
