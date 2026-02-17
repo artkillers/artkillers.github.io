@@ -644,9 +644,9 @@ footer a {
   position: absolute;
   top: -7px;
   right: -7px;
-  background-color: red;
-  color: white;
-  font-size: 12px;
+  background-color: #4e342e;
+  color: var(--color);
+  font-size: 10px;
   padding: 5px 5px;
   width: 10px;
   border-radius: 50%;
