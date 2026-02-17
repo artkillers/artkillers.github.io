@@ -168,9 +168,9 @@ section {
   justify-content: center;
   white-space: nowrap;
   overflow: hidden;
-  font-size: 2rem;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  font-size: 1.8rem;
+  margin-top: 30px;
+  margin-bottom: 50px;
   color: var(--color);
 }
 
@@ -253,8 +253,8 @@ footer a {
 }
 
 .home-photo {
-  width: 270px; 
-  height: 270px;
+  width: 250px; 
+  height: 250px;
   padding: 15px;
   margin-top: 30px;
   overflow: hidden;
