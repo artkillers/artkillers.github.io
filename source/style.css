@@ -28,7 +28,7 @@ html {
   position: relative;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  font-size: 13px;
+  font-size: 12px;
   font-family: var(--font);
   color: var(--color);
 }
@@ -147,7 +147,7 @@ section {
 }
 
 .preloader i {
-  font-size: 5rem;
+  font-size: 7rem;
   color: var(--color);
   animation: spin 1.5s linear infinite;
 }
@@ -212,7 +212,7 @@ section {
 }
 
 .footer-quote {
-  font-size: 12px;
+  font-size: 11px;
   padding: 1.5rem;
   line-height: 1.4;
   color: var(--color);
@@ -285,7 +285,7 @@ footer a {
   padding: 15px;
   text-align: center;
   max-width: 1000px;
-  font-size: 12px;
+  font-size: 11px;
   line-height: 1.4;
   color: var(--color);
 }
@@ -364,7 +364,7 @@ footer a {
   padding: 15px;
   text-align: left;
   max-width: 1000px;
-  font-size: 12px;
+  font-size: 11px;
   line-height: 1.4;
   color: var(--color);
 }
@@ -382,7 +382,7 @@ footer a {
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 11px;
   margin-top: 25px;
   height: 20px;
 }
@@ -414,14 +414,14 @@ footer a {
 }
 
 .timeline-item span {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: bold;
   margin-bottom: 15px;
   color: var(--color);
 }
 
 .timeline-item h3 {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: normal;
 }
 
@@ -483,7 +483,7 @@ footer a {
 
 .testimonial-card p {
   font-style: italic;
-  font-size: 12px;
+  font-size: 11px;
   color: var(--color);
 }
 
@@ -540,7 +540,7 @@ footer a {
 }
 
 .services-card p {
-  font-size: 12px;
+  font-size: 11px;
   line-height: 1.5;
 }
 
@@ -665,7 +665,7 @@ footer a {
 }
 
 .cart-user span {
-  font-size: 12px;        
+  font-size: 11px;        
 }
 
 .cart-panel {
@@ -717,7 +717,7 @@ footer a {
 .shop-categories button {
   padding: 10px 15px;
   margin-top: 20px;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: bold;
   font-family: var(--font);
   color: var(--color);
@@ -841,7 +841,7 @@ footer a {
   max-height: 20px;
   padding: 15px;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 11px;
   text-align: center;
 }
 
@@ -885,7 +885,7 @@ footer a {
   margin-bottom: 5px;
   padding: 8px 8px;
   color: var(--color);
-  font-size: 12px;
+  font-size: 11px;
   cursor: pointer;
   flex-shrink: 0;
 }
@@ -928,7 +928,7 @@ footer a {
   font-family: var(--font);
   border: none;
   color: var(--color);
-  font-size: 12px;
+  font-size: 11px;
   outline: none;
   box-shadow: var(--inset);
 }
@@ -978,7 +978,7 @@ footer a {
 
 .contact-item p {
   margin: 0;
-  font-size: 12px;
+  font-size: 11px;
   color: var(--color);
 }
 
